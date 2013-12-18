@@ -1,0 +1,27 @@
+{
+  "name": "funcstream",
+  "version": "0.0.0",
+  "description": "Functional programming transform stream.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeal/funcstream"
+  },
+  "keywords": [
+    "lodash",
+    "underscore",
+    "lazy",
+    "functional",
+    "stream",
+    "streams",
+    "streams2"
+  ],
+  "author": "Mikeal Rogers <mikeal.rogers@gmail.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/mikeal/funcstream/issues"
+  }
+}
