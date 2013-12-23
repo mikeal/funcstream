@@ -76,9 +76,9 @@ FuncStream.prototype.reduce = function (fn, pre, cb) {
   if (cb) {
     ret.on('error', cb)
     ret.on('end', function () {
-      console.log('pre', pre)
       cb(null, pre)
     })
+    ret.on('data', function () {}) // hack
   }
   return ret
 }
@@ -108,6 +108,7 @@ FuncStream.prototype.compact = function (cb) {
     ret.on('end', function () {
       cb(null, buff)
     })
+    ret.on('data', function () {}) // hack
   }
   return ret
 }
@@ -164,7 +165,6 @@ FuncStream.prototype.each = function (fn) {
 FuncStream.prototype.count = function (cb) {
   return this.map(function () {return 1}).sum(cb)
 }
-
 
 function funcstream (transform) {
   var ret = new FuncStream()
